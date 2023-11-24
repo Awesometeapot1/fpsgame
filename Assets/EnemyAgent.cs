@@ -36,5 +36,7 @@ public class EnemyAgent : MonoBehaviour
             Destroy(gameObject);
             respawn.RespawnEnemy();
         }
+
+
     }
 }

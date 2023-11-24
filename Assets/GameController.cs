@@ -16,7 +16,7 @@ public class Gamecontroller : MonoBehaviour
 
     private int score = 0;
     private float health = 100.0f;
-    private int currentLevel = 1;
+    public int currentLevel = 1;
 
     // Start is called before the first frame update
     // Public variables
@@ -41,11 +41,6 @@ public class Gamecontroller : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            //score = score + 10;
-            score += 10;
-        }
 
         if (health <= 0)
         {
@@ -58,18 +53,26 @@ public class Gamecontroller : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (score == 100) 
         {
-            health -= 10;
-        }
-
-        if (score == 100)
-        {
-            currentLevel += 1;
+            currentLevel = 2;
             gameStatusText.text = "You are on the next level " + currentLevel;
-            score = 0;
 
         }
+        else if (score == 200)
+        {
+            currentLevel = 2;
+            gameStatusText.text = "You are on the next level " + currentLevel;
+
+        }
+
+        else if (score == 300)
+        {
+            currentLevel = 2;
+            gameStatusText.text = "You are on the next level " + currentLevel;
+
+        }
+
         currentLevelText.text = "You are on level " + currentLevel;
 
     }
@@ -79,6 +82,12 @@ public class Gamecontroller : MonoBehaviour
         score += increaseScoreBy;
         scoreText.text = "Score: " + score;
         print("IncreaseScore" + score);
+    }
+    public void DecreaseHealth(int DecreaseHealthBy)
+    {
+        health += DecreaseHealthBy;
+        healthText.text = "Health: " + health;
+        print("DecreaseHealth" + health);
     }
 
 }

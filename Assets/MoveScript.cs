@@ -116,6 +116,13 @@ public class MoveScript : MonoBehaviour
             gameController.IncreaseScore(10);
             Destroy(other.gameObject);
         }
+
+        if (other.tag == "enemy")
+        {
+            print("We collided with the enemy");
+            gameController.DecreaseHealth(-10);
+        }
     }
+
 
 }
