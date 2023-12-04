@@ -8,6 +8,8 @@ public class EnemyRespawner : MonoBehaviour
     public Transform respawnPoint;  // The point where the enemy should respawn
     public Transform respawnPoint1;  // The point where the enemy should respawn
     public Transform respawnPoint2;  // The point where the enemy should respawn
+    public Transform respawnPoint3;  // The point where the enemy should respawn
+    public Transform respawnPoint4;  // The point where the enemy should respawn
     Gamecontroller gameController; // This will hold the reference to the GameController script.
 
     public float respawnTime = 500000f;  // Time delay before respawning the enemy
@@ -38,6 +40,21 @@ public class EnemyRespawner : MonoBehaviour
             Instantiate(enemyPrefab, respawnPoint.position, respawnPoint.rotation);
             Instantiate(enemyPrefab, respawnPoint1.position, respawnPoint.rotation);
             Instantiate(enemyPrefab, respawnPoint2.position, respawnPoint.rotation);
+        }
+        else if (gameController.currentLevel == 4)
+        {
+            Instantiate(enemyPrefab, respawnPoint.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint1.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint2.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint3.position, respawnPoint.rotation);
+        }
+        else if (gameController.currentLevel == 5)
+        {
+            Instantiate(enemyPrefab, respawnPoint.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint1.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint2.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint3.position, respawnPoint.rotation);
+            Instantiate(enemyPrefab, respawnPoint4.position, respawnPoint.rotation);
         }
 
         // You can optionally set up other properties of the enemy here, such as health, etc.

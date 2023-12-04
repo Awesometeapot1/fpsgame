@@ -53,7 +53,7 @@ public class Gamecontroller : MonoBehaviour
 
         }
 
-        if (score == 100) 
+        if (score == 100)
         {
             currentLevel = 2;
             gameStatusText.text = "You are on the next level " + currentLevel;
@@ -68,7 +68,21 @@ public class Gamecontroller : MonoBehaviour
 
         else if (score == 300)
         {
-            currentLevel = 2;
+            currentLevel = 3;
+            gameStatusText.text = "You are on the next level " + currentLevel;
+
+        }
+
+        else if (score == 400)
+        {
+            currentLevel = 4;
+            gameStatusText.text = "You are on the next level " + currentLevel;
+
+        }
+
+        else if (score == 500)
+        {
+            currentLevel = 5;
             gameStatusText.text = "You are on the next level " + currentLevel;
 
         }
